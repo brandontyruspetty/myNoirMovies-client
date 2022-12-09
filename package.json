@@ -1,0 +1,18 @@
+{
+  "name": "mynoirmovies-client",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandontyruspetty/myNoirMovies-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandontyruspetty/myNoirMovies-client/issues"
+  },
+  "homepage": "https://github.com/brandontyruspetty/myNoirMovies-client#readme"
+}
