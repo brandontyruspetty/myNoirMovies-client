@@ -2905,25 +2905,25 @@ var _mainView = require("./components/main-view/main-view");
 //Import statement to indicate that you need to bundle './index.scss'
 var _indexScss = require("./index.scss");
 //Main component (will eventually use all the others)
-const MyNoirMoviesApplication = ()=>{
+const MyNoirMoviesApp = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
         fileName: "src/index.jsx",
-        lineNumber: 11,
-        columnNumber: 5
+        lineNumber: 10,
+        columnNumber: 10
     }, undefined);
 };
-_c = MyNoirMoviesApplication;
+_c = MyNoirMoviesApp;
 //Finds the root of your app
 const container = document.querySelector("#root");
 const root = (0, _client.createRoot)(container);
 //Tells React to render your app in the root DOM element
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MyNoirMoviesApplication, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MyNoirMoviesApp, {}, void 0, false, {
     fileName: "src/index.jsx",
-    lineNumber: 20,
+    lineNumber: 18,
     columnNumber: 13
 }, undefined));
 var _c;
-$RefreshReg$(_c, "MyNoirMoviesApplication");
+$RefreshReg$(_c, "MyNoirMoviesApp");
 
   $parcel$ReactRefreshHelpers$98a3.postlude(module);
 } finally {
