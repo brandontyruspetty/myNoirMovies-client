@@ -4,6 +4,7 @@ import { MovieView } from "../movie-view/movie-view";
 
 
 export const MainView = () => {
+
   const [movies, setMovies] = useState([]);
   
   useEffect(() => {
@@ -24,6 +25,9 @@ export const MainView = () => {
       setMovies(moviesFromApi);
     });
   }, []);
+
+  const [movies, setMovies] = useState([]);
+
 
   const [selectedMovie, setSelectedMovie] = useState(null);
 
