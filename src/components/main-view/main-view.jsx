@@ -1,29 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 
 
 export const MainView = () => {
-  const [movies, setMovies] = useState([
-    { 
-      id: 1, 
-      title: "Le Samourai",
-      image: "https://s3.amazonaws.com/criterion-production/films/9bee98615a85bea1878af49ba320ca40/WvMVqQiUO8W03H1PGJcf0J5s64wNJe_large.jpg",
-      director: "Jean-Pierre Melville"
-    },
-    { 
-      id: 2, 
-      title: "Drive",
-      image: "https://upload.wikimedia.org/wikipedia/en/1/13/Drive2011Poster.jpg",
-      director: "Niocholas Winding Refn"
-    },
-    { 
-      id: 3, 
-      title: "The Third Man",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Third_Man_%281949_American_theatrical_poster%29.jpg/440px-The_Third_Man_%281949_American_theatrical_poster%29.jpg",
-      director: "Carol Reed"
-    }
-  ]); //
+
+  const [movies, setMovies] = useState([]);
+  
+  useEffect(() => {
+    fetch("https://mynoirmovies.herokuapp.com/movies")
+    .then((response) => response.json())
+    .then((data) => {
+      const moviesFromApi = data.map((movie) => {
+        return {
+          id: movie.key,
+          title: movie.Title,
+          image: movie.ImagePath,
+          genre: movie.Genre.Name,
+          description: movie.Description,
+          director: movie.Director.Name
+        };
+      });
+      
+      setMovies(moviesFromApi);
+    });
+  }, []);
+
+  const [movies, setMovies] = useState([]);
+
 
   const [selectedMovie, setSelectedMovie] = useState(null);
 
