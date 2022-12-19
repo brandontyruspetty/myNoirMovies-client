@@ -7,17 +7,17 @@ export const MainView = () => {
   const [movies, setMovies] = useState([]);
   
   useEffect(() => {
-    fetch("https://mynoirmovies/herokuapp.com/movies")
+    fetch("https://mynoirmovies.herokuapp.com/movies")
     .then((response) => response.json())
     .then((data) => {
-      const moviesFromApi = data.docs.map((doc) => {
+      const moviesFromApi = data.map((movie) => {
         return {
-          id: doc.key,
-          title: doc.title,
-          image: ``,
-          genre: doc.genre,
-          description: doc.description,
-          director: doc.director_name?.[0]
+          id: movie.key,
+          title: movie.Title,
+          image: movie.ImagePath,
+          genre: movie.Genre.Name,
+          description: movie.Description,
+          director: movie.Director.Name
         };
       });
       
