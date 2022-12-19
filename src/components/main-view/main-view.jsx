@@ -23,7 +23,7 @@ export const MainView = () => {
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Third_Man_%281949_American_theatrical_poster%29.jpg/440px-The_Third_Man_%281949_American_theatrical_poster%29.jpg",
       director: "Carol Reed"
     }
-  ]);
+  ]); //
 
   const [selectedMovie, setSelectedMovie] = useState(null);
 
