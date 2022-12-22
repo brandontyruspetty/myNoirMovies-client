@@ -2932,9 +2932,9 @@ $RefreshReg$(_c, "MyNoirMoviesApp");
 }
 },{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8VV7g"}],"iTorj":[function(require,module,exports) {
 "use strict";
-module.exports = require("1cfa50bd0705c602");
+module.exports = require("eded2a7d66e87f17");
 
-},{"1cfa50bd0705c602":"48uCM"}],"48uCM":[function(require,module,exports) {
+},{"eded2a7d66e87f17":"48uCM"}],"48uCM":[function(require,module,exports) {
 /**
  * @license React
  * react-jsx-dev-runtime.development.js
@@ -2946,7 +2946,7 @@ module.exports = require("1cfa50bd0705c602");
  */ "use strict";
 (function() {
     "use strict";
-    var React = require("603b2f4aa00a678b");
+    var React = require("908f8b4390ec24c9");
     // ATTENTION
     // When adding new symbols to this file,
     // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
@@ -3765,11 +3765,11 @@ module.exports = require("1cfa50bd0705c602");
     exports.jsxDEV = jsxDEV$1;
 })();
 
-},{"603b2f4aa00a678b":"21dqq"}],"21dqq":[function(require,module,exports) {
+},{"908f8b4390ec24c9":"21dqq"}],"21dqq":[function(require,module,exports) {
 "use strict";
-module.exports = require("edca3de71313c84d");
+module.exports = require("3f4e00db4ef0ba5b");
 
-},{"edca3de71313c84d":"6YvXz"}],"6YvXz":[function(require,module,exports) {
+},{"3f4e00db4ef0ba5b":"6YvXz"}],"6YvXz":[function(require,module,exports) {
 /**
  * @license React
  * react.development.js
@@ -5637,7 +5637,7 @@ module.exports = require("edca3de71313c84d");
 
 },{}],"lOjBx":[function(require,module,exports) {
 "use strict";
-var m = require("cc05998f1687b625");
+var m = require("ef47d3e304affef5");
 var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 exports.createRoot = function(c, o) {
     i.usingClientEntryPoint = true;
@@ -5656,7 +5656,7 @@ exports.hydrateRoot = function(c, h, o) {
     }
 };
 
-},{"cc05998f1687b625":"j6uA9"}],"j6uA9":[function(require,module,exports) {
+},{"ef47d3e304affef5":"j6uA9"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -5670,9 +5670,9 @@ function checkDCE() {
     // a false positive.
     throw new Error("^_^");
 }
-module.exports = require("7573bd2e5c2d7f0c");
+module.exports = require("561da8b7da263041");
 
-},{"7573bd2e5c2d7f0c":"3iA9v"}],"3iA9v":[function(require,module,exports) {
+},{"561da8b7da263041":"3iA9v"}],"3iA9v":[function(require,module,exports) {
 /**
  * @license React
  * react-dom.development.js
@@ -5685,8 +5685,8 @@ module.exports = require("7573bd2e5c2d7f0c");
 (function() {
     "use strict";
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
-    var React = require("a31cf109c6b0c4b4");
-    var Scheduler = require("259d15d2eb2f9be4");
+    var React = require("f21a20810a7872e4");
+    var Scheduler = require("9755f020e7a8071c");
     var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     var suppressWarning = false;
     function setSuppressWarning(newSuppressWarning) {
@@ -26657,11 +26657,11 @@ module.exports = require("7573bd2e5c2d7f0c");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{"a31cf109c6b0c4b4":"21dqq","259d15d2eb2f9be4":"juvHo"}],"juvHo":[function(require,module,exports) {
+},{"f21a20810a7872e4":"21dqq","9755f020e7a8071c":"juvHo"}],"juvHo":[function(require,module,exports) {
 "use strict";
-module.exports = require("69d0733b3fa6e0e8");
+module.exports = require("b83454cf32a88249");
 
-},{"69d0733b3fa6e0e8":"RqdIf"}],"RqdIf":[function(require,module,exports) {
+},{"b83454cf32a88249":"RqdIf"}],"RqdIf":[function(require,module,exports) {
 /**
  * @license React
  * scheduler.development.js
@@ -27132,26 +27132,22 @@ var _movieView = require("../movie-view/movie-view");
 var _s = $RefreshSig$();
 const MainView = ()=>{
     _s();
-    const [movies, setMovies] = (0, _react.useState)([
-        {
-            id: 1,
-            title: "Le Samourai",
-            image: "https://s3.amazonaws.com/criterion-production/films/9bee98615a85bea1878af49ba320ca40/WvMVqQiUO8W03H1PGJcf0J5s64wNJe_large.jpg",
-            director: "Jean-Pierre Melville"
-        },
-        {
-            id: 2,
-            title: "Drive",
-            image: "https://upload.wikimedia.org/wikipedia/en/1/13/Drive2011Poster.jpg",
-            director: "Niocholas Winding Refn"
-        },
-        {
-            id: 3,
-            title: "The Third Man",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Third_Man_%281949_American_theatrical_poster%29.jpg/440px-The_Third_Man_%281949_American_theatrical_poster%29.jpg",
-            director: "Carol Reed"
-        }
-    ]);
+    const [movies, setMovies] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        fetch("https://mynoirmovies.herokuapp.com/movies").then((response)=>response.json()).then((data)=>{
+            const moviesFromApi = data.map((movie)=>{
+                return {
+                    id: movie.key,
+                    title: movie.Title,
+                    image: movie.ImagePath,
+                    genre: movie.Genre.Name,
+                    description: movie.Description,
+                    director: movie.Director.Name
+                };
+            });
+            setMovies(moviesFromApi);
+        });
+    }, []);
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
     if (selectedMovie) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieView.MovieView), {
         movie: selectedMovie,
@@ -27187,7 +27183,7 @@ const MainView = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "3TvjJ63qsN4sfUEqeZj3bdKf20c=");
+_s(MainView, "llzgrUkvR/+OoCNfiqlA1H2LLFI=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
