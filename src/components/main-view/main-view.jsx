@@ -11,7 +11,7 @@ export const MainView = () => {
   const [selectedMovie, setSelectedMovie] = useState(null);
 
   const [user, setUser] = useState(null);
-  
+
   useEffect(() => {
     fetch("https://mynoirmovies.herokuapp.com/movies")
     .then((response) => response.json())
@@ -26,13 +26,15 @@ export const MainView = () => {
           director: movie.Director.Name
         };
       });
-      
+
       setMovies(moviesFromApi);
     });
   }, []);
 
+  if (!user) {
+    return <LoginView />;
+  }
   
-
   if (selectedMovie) {
     return (
       <MovieView movie={selectedMovie} onBackClick={() => setSelectedMovie(null)} />
