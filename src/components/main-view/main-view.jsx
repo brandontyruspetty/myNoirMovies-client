@@ -26,9 +26,6 @@ export const MainView = () => {
     });
   }, []);
 
-  const [movies, setMovies] = useState([]);
-
-
   const [selectedMovie, setSelectedMovie] = useState(null);
 
   if (selectedMovie) {
