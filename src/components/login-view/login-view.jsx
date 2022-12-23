@@ -15,7 +15,15 @@ export const LoginView = ({ onLoggedIn }) => {
     fetch("https://mynoirmovies.herokuapp.com/account/login.json", {
       method: "POST",
       body: JSON.stringify(data)
-    });
+  }).then((response) => {
+    if (response.ok) {
+      onLoggedIn(username);
+    } else {
+      alert("Login failed")
+    }
+  });
+      
+    };
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -28,7 +36,10 @@ export const LoginView = ({ onLoggedIn }) => {
       </label>
       <label>
         Password:
-        <input type="password" />
+        <input type="password" 
+        value={password}
+        onChange={(e) => setUsername(e.target.value)}
+        />
       </label>
       <button type="submit">
         Submit
