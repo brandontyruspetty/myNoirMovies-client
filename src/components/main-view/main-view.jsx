@@ -32,7 +32,7 @@ export const MainView = () => {
   }, []);
 
   if (!user) {
-    return <LoginView />;
+    return <LoginView onLogggedIn={(user) => setUser(user)} />;
   }
   
   if (selectedMovie) {
