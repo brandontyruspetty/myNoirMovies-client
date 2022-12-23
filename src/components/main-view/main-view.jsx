@@ -13,7 +13,7 @@ export const MainView = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("https://mynoirmovies.herokuapp.com/movies")
+    fetch("http://localhost:8080/movies")
     .then((response) => response.json())
     .then((data) => {
       const moviesFromApi = data.map((movie) => {
