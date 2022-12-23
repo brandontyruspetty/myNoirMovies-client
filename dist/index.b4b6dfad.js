@@ -27220,7 +27220,7 @@ const MovieCard = ({ movie , onMovieClick  })=>{
 };
 _c = MovieCard;
 MovieCard.PropTypes = {
-    movie: PropType.shape({
+    movie: (0, _propTypesDefault.default).shape({
         title: (0, _propTypesDefault.default).string.isRequired,
         image: (0, _propTypesDefault.default).string.isRequired,
         director: (0, _propTypesDefault.default).string
