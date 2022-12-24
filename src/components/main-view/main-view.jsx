@@ -17,9 +17,13 @@ export const MainView = () => {
   const [token, setToken] = useState(storedToken? storedToken : null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/movies")
+    if (!token) return;
+
+    fetch("http://localhost:8080/movies", {
+      headers: { Authorization: `Bearer${token}` },
+    })
     .then((response) => response.json())
-    .then((data) => {
+    .then((moviesFromApi) => {
       const moviesFromApi = data.map((movie) => {
         return {
           id: movie.key,
@@ -33,7 +37,7 @@ export const MainView = () => {
 
       setMovies(moviesFromApi);
     });
-  }, []);
+  }, [token]);
 
   if (!user) {
     return ( 
