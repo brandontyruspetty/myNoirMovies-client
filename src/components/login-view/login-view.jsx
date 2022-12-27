@@ -12,7 +12,7 @@ export const LoginView = ({ onLoggedIn }) => {
       Password: password
     };
 
-    fetch("http://localhost:8080/movies.json", {
+    fetch("http://localhost:8080/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -31,8 +31,10 @@ export const LoginView = ({ onLoggedIn }) => {
     }
   })
     .catch((e) => {
+      console.log(e);
       alert("Something went wrong");
     });
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -48,7 +50,7 @@ export const LoginView = ({ onLoggedIn }) => {
         Password:
         <input type="password" 
         value={password}
-        onChange={(e) => setUsername(e.target.value)}
+        onChange={(e) => setPassword(e.target.value)}
         required
         />
       </label>
@@ -57,5 +59,5 @@ export const LoginView = ({ onLoggedIn }) => {
         </button>
     </form>
     );
-}};
+};
 

@@ -20,10 +20,10 @@ export const MainView = () => {
     if (!token) return;
 
     fetch("http://localhost:8080/movies", {
-      headers: { Authorization: `Bearer${token}` },
+      headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => response.json())
-    .then((moviesFromApi) => {
+    .then((data) => {
       const moviesFromApi = data.map((movie) => {
         return {
           id: movie.key,
@@ -43,7 +43,7 @@ export const MainView = () => {
     return ( 
       <>
     <LoginView 
-      onLogggedIn={(user, token) => {
+      onLoggedIn={(user, token) => {
         setUser(user);
         setToken(token);
       }}
@@ -88,10 +88,11 @@ export const MainView = () => {
 
   return (
     <div>
-      <button>
+      <button
         onClick={() => {
           setUser(null); setToken(null); localStorage.clear();
         }}
+        >
         Logout
       </button>
       {movies.map((movie) => {

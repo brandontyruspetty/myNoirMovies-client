@@ -16,7 +16,7 @@ export const SignupView = () => {
       Birthday: birthday
     };
 
-    fetch("http://localhost:8080/signup", {
+    fetch("http://localhost:8080/users", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { 
