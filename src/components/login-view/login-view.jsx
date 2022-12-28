@@ -12,7 +12,8 @@ export const LoginView = ({ onLoggedIn }) => {
       Password: password
     };
 
-    fetch("http://localhost:8080/login", {
+    //fetch("http://localhost:8080/login", {
+      fetch(`${process.env.API_ENDPOINT}/movies`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
