@@ -18,7 +18,7 @@ used anywhere and on any device, giving all users the same experience.
 whenever they want to. Having the ability to save a list of their favorite movies will ensure
 users always have access to the films they want to watch or recommend to their peers
 
-Tech Stack: React, Parcel, Bootstrap
+Tech Stack: React, Parcel, Bootstrap and others
 
 Features:
 Main view
