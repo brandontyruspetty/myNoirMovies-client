@@ -15,13 +15,15 @@
   },
   "homepage": "https://github.com/brandontyruspetty/myNoirMovies-client#readme",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.2",
-    "prop-types": "^15.8.1",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "prop-types": "^15.8.1"
   },
   "description": ""
 }
