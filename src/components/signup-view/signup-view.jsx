@@ -17,7 +17,7 @@ export const SignupView = () => {
     };
 
     //fetch("http://localhost:8080/users", {
-      fetch(`${process.env.API_ENDPOINT}/movies`, {
+      fetch(`${process.env.API_ENDPOINT}/users`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: { 

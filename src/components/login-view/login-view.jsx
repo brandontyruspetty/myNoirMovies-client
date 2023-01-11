@@ -13,7 +13,7 @@ export const LoginView = ({ onLoggedIn }) => {
     };
 
     //fetch("http://localhost:8080/login", {
-      fetch(`${process.env.API_ENDPOINT}/movies`, {
+      fetch(`${process.env.API_ENDPOINT}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -44,6 +44,7 @@ export const LoginView = ({ onLoggedIn }) => {
         <input type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        minLength="5"
         required
         />
       </label>

@@ -43,14 +43,14 @@ export const MainView = () => {
   if (!user) {
     return ( 
       <>
-    <LoginView 
-      onLoggedIn={(user, token) => {
-        setUser(user);
-        setToken(token);
-      }}
-       />
-       or
-       <SignupView />
+        <LoginView 
+          onLoggedIn={(user, token) => {
+            setUser(user);
+            setToken(token);
+          }}
+          />
+          or
+        <SignupView />
        </>
     );
   }
@@ -61,6 +61,8 @@ export const MainView = () => {
       <button
       onClick={() => {
         setUser(null);
+        setToken(null);
+        localStorage.clear();
       }}
       >
         Logout
@@ -77,7 +79,9 @@ export const MainView = () => {
       <>
       <button
       onClick={() => {
-        setUser(null)
+        setUser(null);
+        setToken(null);
+        localStorage.clear();
       }}
       >
         Logout
