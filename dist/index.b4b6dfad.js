@@ -28459,7 +28459,7 @@ const SignupView = ()=>{
             Birthday: birthday
         };
         //fetch("http://localhost:8080/users", {
-        fetch(`${"http://localhost:1234"}`, {
+        fetch(`${"http://localhost:1234"}/users`, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
