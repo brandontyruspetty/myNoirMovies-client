@@ -27143,7 +27143,7 @@ const MainView = ()=>{
     (0, _react.useEffect)(()=>{
         if (!token) return;
         //fetch("http://localhost:8080/movies", {
-        fetch(`${"http://localhost:1234"}/movies`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/movies`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -28346,7 +28346,7 @@ const LoginView = ({ onLoggedIn  })=>{
             Password: password
         };
         //fetch("http://localhost:8080/login", {
-        fetch(`${"http://localhost:1234"}/login`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -28459,7 +28459,7 @@ const SignupView = ()=>{
             Birthday: birthday
         };
         //fetch("http://localhost:8080/users", {
-        fetch(`${"http://localhost:1234"}/users`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/users`, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
