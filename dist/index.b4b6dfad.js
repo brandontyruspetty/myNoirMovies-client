@@ -27143,7 +27143,7 @@ const MainView = ()=>{
     (0, _react.useEffect)(()=>{
         if (!token) return;
         //fetch("http://localhost:8080/movies", {
-        fetch(`${undefined}/movies`, {
+        fetch(`${"http://localhost:1234"}/movies`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -28346,7 +28346,7 @@ const LoginView = ({ onLoggedIn  })=>{
             Password: password
         };
         //fetch("http://localhost:8080/login", {
-        fetch(`${undefined}/login`, {
+        fetch(`${"http://localhost:1234"}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -28459,7 +28459,7 @@ const SignupView = ()=>{
             Birthday: birthday
         };
         //fetch("http://localhost:8080/users", {
-        fetch(`${undefined}/users`, {
+        fetch(`${"http://localhost:1234"}/users`, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
