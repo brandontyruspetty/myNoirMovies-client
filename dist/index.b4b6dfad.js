@@ -27160,7 +27160,7 @@ const MainView = ()=>{
     (0, _react.useEffect)(()=>{
         if (!token) return;
         //fetch("http://localhost:8080/movies", {
-        fetch(`${undefined}/movies`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/movies`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -41067,7 +41067,7 @@ const LoginView = ({ onLoggedIn  })=>{
             Password: password
         };
         //fetch("http://localhost:8080/login", {
-        fetch(`${undefined}/login`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -41167,7 +41167,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"a7bQf","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8VV7g","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"4OGiN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80","@parcel/transformer-js/src/esmodule-helpers.js":"a7bQf","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8VV7g"}],"4OGiN":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$73d1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41200,7 +41200,7 @@ const SignupView = ()=>{
             Birthday: birthday
         };
         //fetch("http://localhost:8080/users", {
-        fetch(`${undefined}/users`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/users`, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -41347,6 +41347,6 @@ $RefreshReg$(_c, "SignupView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"a7bQf","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8VV7g","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"lJZlQ":[function() {},{}],"i5LP7":[function() {},{}]},["eDqjr","34GR8","d8Dch"], "d8Dch", "parcelRequire4da7")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80","@parcel/transformer-js/src/esmodule-helpers.js":"a7bQf","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8VV7g"}],"lJZlQ":[function() {},{}],"i5LP7":[function() {},{}]},["eDqjr","34GR8","d8Dch"], "d8Dch", "parcelRequire4da7")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
