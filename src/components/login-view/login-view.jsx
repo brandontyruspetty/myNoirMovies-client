@@ -48,6 +48,7 @@ export const LoginView = ({ onLoggedIn }) => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
+          placeholder="Enter a username"
           minLength="3" 
         />
       </Form.Group>
@@ -59,6 +60,7 @@ export const LoginView = ({ onLoggedIn }) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          placeholder="Enter a password"
         />
       </Form.Group>
       <Button variant="primary" type="submit">
