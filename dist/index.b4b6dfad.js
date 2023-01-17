@@ -27167,7 +27167,7 @@ const MainView = ()=>{
         }).then((response)=>response.json()).then((data)=>{
             const moviesFromApi = data.map((movie)=>{
                 return {
-                    id: movie.key,
+                    id: movie._id,
                     title: movie.Title,
                     image: movie.ImagePath,
                     genre: movie.Genre.Name,
