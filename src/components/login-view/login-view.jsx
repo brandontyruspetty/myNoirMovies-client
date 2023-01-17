@@ -13,8 +13,7 @@ export const LoginView = ({ onLoggedIn }) => {
       Username: username,
       Password: password
     };
-
-    //fetch("http://localhost:8080/login", {
+    
       fetch(`${process.env.API_ENDPOINT}/login`, {
       method: "POST",
       headers: {
