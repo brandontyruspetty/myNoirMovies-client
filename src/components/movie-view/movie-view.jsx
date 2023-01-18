@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Card, Button, CardGroup, Row, Container } from "react-bootstrap";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import "./movie-view.scss";
