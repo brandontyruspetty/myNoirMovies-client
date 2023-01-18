@@ -36,7 +36,6 @@ export const MovieView = ({ movies }) => {
       <Card bg="dark" text="light">
         <Card.Header>
           <div className="title-text-center">
-            <span>Title: </span>
             <span>{movie.title}</span>
           </div>
          <Button
@@ -50,24 +49,25 @@ export const MovieView = ({ movies }) => {
         </Card.Header>
         <Card.Body>
         <div>
-          <img className="w-100" 
-          src={movie.image} 
+          <Card.Img
+           className="w-100" 
+            src={movie.image} 
           />
         </div>
-        </Card.Body>
-       
-       
         <div>
           <span>Director: </span>
           <span>{movie.director}</span>
         </div>
-        <Link to={`/`}>
-          <button className="back-button" style={{ cursor: "pointer" }}>
-          Back
-          </button>
-        </Link>
+        </Card.Body>
+        <Card.Footer>
+          <Link to={`/`}>
+            <Button className="back-button" style={{ cursor: "pointer" }}>
+            Back
+            </Button>
+          </Link>
+        </Card.Footer>
         </Card>
-        </Row>
-      </Container>
+      </Row>
+    </Container>
   );
 };
