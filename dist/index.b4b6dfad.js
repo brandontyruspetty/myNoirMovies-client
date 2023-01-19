@@ -46228,8 +46228,8 @@ const NavigationBar = ({ user , onLoggedOut  })=>{
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
                                         as: (0, _reactRouterDom.Link),
-                                        to: "/profile",
-                                        children: "Profile"
+                                        to: "/user",
+                                        children: user.Username
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
                                         lineNumber: 29,
