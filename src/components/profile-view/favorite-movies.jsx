@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Row, Col, Container, Card, Figure } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import "./favorite-movies.scss";
  
 export const FavoriteMovies = ({ usersFavoriteMovies }) => {
   const token = localStorage.getItem("token");
@@ -45,6 +45,7 @@ export const FavoriteMovies = ({ usersFavoriteMovies }) => {
                         md={6}
                         lg={3}
                         key={movie._id}
+                        className="fav-movie"
                         >
                           <Card bg="dark" text="light">
                             <Figure>
