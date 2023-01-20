@@ -12036,6 +12036,64 @@ textarea.form-control-lg {
 
 
 
+.div.row {
+  align-items: center;
+}
+
+.fav-movie {
+  margin: 10px;
+}
+
+.fav-movie figure {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: auto;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fav-movie figure img {
+  height: 250px;
+  margin: auto;
+}
+
+.fav-movie figure figcaption {
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.fav-movie figure a:link {
+  margin: auto;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.fav-movie button.btn {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.card {
+  margin-bottom: 15px;
+}
+
+.favtitle {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.btn-remove {
+  margin-top: 20px;
+}
+
+.figure-caption {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
 .back-button {
   color: #f5f5f5;
   background-color: #1e90ff;
