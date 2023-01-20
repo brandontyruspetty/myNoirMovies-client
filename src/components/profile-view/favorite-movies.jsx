@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Row, Col, Container, Card, Figure } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./favorite-movies.scss";
+
  
 export const FavoriteMovies = ({ usersFavoriteMovies }) => {
   const token = localStorage.getItem("token");
@@ -33,7 +33,7 @@ export const FavoriteMovies = ({ usersFavoriteMovies }) => {
             <Card bg="dark" text="light">
               <Card.Body>
                 <Col xs={12}>
-                  <Card.Title>
+                  <Card.Title className="favtitle">
                     Favorite Movies
                   </Card.Title>
                 </Col>
@@ -48,7 +48,7 @@ export const FavoriteMovies = ({ usersFavoriteMovies }) => {
                         >
                           <Card bg="dark" text="light">
                             <Figure>
-                              <Link to={`/movies/${movies._id}`}>
+                              <Link to={`/movies/${movie._id}`}>
                                 <Figure.Image
                                   crossOrigins="anonymous"
                                   src={movie.image}
