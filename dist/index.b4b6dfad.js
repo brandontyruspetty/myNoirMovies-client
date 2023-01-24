@@ -46396,7 +46396,7 @@ const ProfileView = ({ movies  })=>{
         const requestOptions = {
             method: "PUT",
             headers: {
-                Authorization: `Bearer $(token)`,
+                Authorization: `Bearer ${token}`,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(userCredentials)
@@ -46638,7 +46638,7 @@ const FavoriteMovies = ({ usersFavoriteMovies  })=>{
         fetch(`${"https://mynoirmovies.herokuapp.com"}/users/${storedUser.Username}/movies/${movieId}`, {
             method: "DELETE",
             headers: {
-                Authorization: `Bearer $(token)`
+                Authorization: `Bearer ${token}`
             }
         }).then((response)=>response.json()).then((data)=>{
             if (data) {
