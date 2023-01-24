@@ -10,14 +10,16 @@ export const MovieView = ({ movies }) => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
   const token = localStorage.getItem("token");
 
+  console.log(movie)
+
   const addFavorite = (movieId) => {
     if (!token) return;
 
-    const url = `${process.env.API_ENDPOINT}/users/${storedUser.Username}movies/${movieId}`;
+    const url = `${process.env.API_ENDPOINT}/users/${storedUser.Username}/movies/${movieId}`;
       const requestOptions = {
         method: "POST",
         headers: {
-          Authorization: `Bearer $(token)`,
+          Authorization: `Bearer ${token}`,
         },
       };
       fetch(url, requestOptions)
@@ -42,7 +44,7 @@ export const MovieView = ({ movies }) => {
           className="fav-btn"
           size="sm"
           variant="secondary"
-          onClick={addFavorite(movie._id)}
+          onClick={() => addFavorite(movie.id)}
           >
           Add to Favorites
           </Button>
