@@ -51,7 +51,7 @@ export const FavoriteMovies = ({ usersFavoriteMovies }) => {
                             <Figure>
                               <Link to={`/movies/${movie._id}`}>
                                 <Figure.Image
-                                  crossOrigins="anonymous"
+                                  crossorigins="anonymous"
                                   src={movie.image}
                                   alt={movie.title}
                                   />
