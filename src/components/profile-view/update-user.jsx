@@ -1,9 +1,8 @@
 import React from "react";
-import { useState } from "react";
 import { Button, Form, Col, Row, Container, Card, CardGroup } from "react-bootstrap";
 import "./update-user";
 
-function UpdateUser({ handleSubmit, handleUpdate, user }) {
+function UpdateUser({ handleSubmit, user }) {
   return (
     <Container>
       <Row>
