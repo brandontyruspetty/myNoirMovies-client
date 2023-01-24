@@ -46688,7 +46688,7 @@ const FavoriteMovies = ({ usersFavoriteMovies  })=>{
                                                         to: `/movies/${movie._id}`,
                                                         children: [
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Figure).Image, {
-                                                                crossOrigins: "anonymous",
+                                                                crossorigins: "anonymous",
                                                                 src: movie.image,
                                                                 alt: movie.title
                                                             }, void 0, false, {
