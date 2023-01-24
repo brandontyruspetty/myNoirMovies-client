@@ -6,6 +6,7 @@ import Form from "react-bootstrap/Form";
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -14,7 +15,6 @@ export const LoginView = ({ onLoggedIn }) => {
       Password: password
     };
 
-    //fetch("http://localhost:8080/login", {
       fetch(`${process.env.API_ENDPOINT}/login`, {
       method: "POST",
       headers: {
