@@ -73,36 +73,8 @@ const isRequestValid = (userCredentials) => {
   return true;
 };
 
-const handleUpdate = () => {
-  if (!token) return;
-
-  var userCredentials = {
-    Username: currentUsername ? currentUsername : userData.Username,
-    Password: password ? password : userData.Password,
-    Email: email ? email : userData.Email,
-    Birthday: birthday ? birthday : userData.Birthday,
-  };
-
-  if (!isRequestValid(userCredentials)) return;
-
-  fetch(`https://myNoirMovies.herokuapp.com/users/${storedUser.Username}`, {
-    method: "PUT",
-    headers: { Authorization: `Bearer $(token)` },
-    body: JSON.stringify(userCredentials),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data) {
-      localStorage.setItem("user", JSON.stringify(data));
-      window.open(`/$(storedUser.Username)`, "_self");
-      }
-    })
-    .catch((e) => {
-      alert("Something is Wrong");
-    });
-};
-
 const handleSubmit = (e) => {
+  e.preventDefault();
   if (!token) return;
 
   var userCredentials = {
@@ -125,7 +97,6 @@ const handleSubmit = (e) => {
   };
 
   fetch(url, requestOptions)
-    .then((response) => response.json())
     .then(handleResponse)
     .catch((e) => {
       alert("Something is Wrong");
@@ -140,7 +111,7 @@ return (
           <Card.Body>
             <UserInfo
               username={userData && userData.Username}
-              email={userData && userData.email}
+              email={userData && userData.Email}
               birthday={userData && userData.Birth_Date}
               />
           </Card.Body>
@@ -151,7 +122,6 @@ return (
           <Card.Body>
             <UpdateUser
               handleSubmit={handleSubmit}
-              handleUpdate={handleUpdate}
               user={userData}
             />
           </Card.Body>
