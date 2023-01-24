@@ -46643,7 +46643,7 @@ const FavoriteMovies = ({ usersFavoriteMovies  })=>{
         }).then((response)=>response.json()).then((data)=>{
             if (data) {
                 localStorage.setItem("user", JSON.stringify(data));
-                window.open(`/${storedUser.Username}`, "_self");
+                window.open(`/users`, "_self");
             }
         }).catch((e)=>{
             alert("Something is wrong");
@@ -46718,7 +46718,7 @@ const FavoriteMovies = ({ usersFavoriteMovies  })=>{
                                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
                                                         className: "btn-remove",
                                                         variant: "secondary",
-                                                        onClick: ()=>removeFavorite(movie._id),
+                                                        onClick: ()=>removeFavorite(movie.id),
                                                         children: "Remove"
                                                     }, void 0, false, {
                                                         fileName: "src/components/profile-view/favorite-movies.jsx",
