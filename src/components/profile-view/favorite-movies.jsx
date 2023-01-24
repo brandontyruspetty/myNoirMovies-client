@@ -18,7 +18,7 @@ export const FavoriteMovies = ({ usersFavoriteMovies }) => {
       .then((data) => {
         if (data) {
           localStorage.setItem("user", JSON.stringify(data));
-          window.open(`/${storedUser.Username}`, "_self");
+          window.open(`/users`, "_self");
         }
       })
       .catch((e) => {
@@ -62,7 +62,7 @@ export const FavoriteMovies = ({ usersFavoriteMovies }) => {
                               <Button
                                 className="btn-remove"
                                 variant="secondary"
-                                onClick={() => removeFavorite(movie._id)}
+                                onClick={() => removeFavorite(movie.id)}
                                 >
                                   Remove
                                 </Button>
