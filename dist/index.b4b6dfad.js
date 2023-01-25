@@ -27161,7 +27161,7 @@ const MainView = ()=>{
     const [token, setToken] = (0, _react.useState)(storedToken ? storedToken : null);
     (0, _react.useEffect)(()=>{
         if (!token) return;
-        fetch(`${undefined}/movies`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/movies`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -45707,7 +45707,7 @@ const MovieView = ({ movies  })=>{
     console.log(movie);
     const addFavorite = (movieId)=>{
         if (!token) return;
-        const url = `${undefined}/users/${storedUser.Username}/movies/${movieId}`;
+        const url = `${"https://mynoirmovies.herokuapp.com"}/users/${storedUser.Username}/movies/${movieId}`;
         const requestOptions = {
             method: "POST",
             headers: {
@@ -45886,7 +45886,7 @@ const LoginView = ({ onLoggedIn  })=>{
             Username: username,
             Password: password
         };
-        fetch(`${undefined}/login`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -46021,7 +46021,7 @@ const SignupView = ()=>{
             Birthday: birthday
         };
         //fetch("http://localhost:8080/users", {
-        fetch(`${undefined}/users`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/users`, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -46347,7 +46347,7 @@ const ProfileView = ({ movies  })=>{
         });
     }
     const getUserData = ()=>{
-        const url = `${undefined}/users/${storedUser.Username}`;
+        const url = `${"https://mynoirmovies.herokuapp.com"}/users/${storedUser.Username}`;
         const bearer = `Bearer ${token}`;
         fetch(url, {
             method: "GET",
@@ -46548,7 +46548,7 @@ const UserInfo = ({ username , email  })=>{
         if (username && token) {
             let confirmDelete = confirm("Are you sure you want to delete your account?");
             if (!confirmDelete) return;
-            fetch(`${undefined}/users/${username}`, {
+            fetch(`${"https://mynoirmovies.herokuapp.com"}/users/${username}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer $(token)`
@@ -46635,7 +46635,7 @@ const FavoriteMovies = ({ usersFavoriteMovies  })=>{
     const token = localStorage.getItem("token");
     const storedUser = JSON.parse(localStorage.getItem("user"));
     const removeFavorite = (movieId)=>{
-        fetch(`${undefined}/users/${storedUser.Username}/movies/${movieId}`, {
+        fetch(`${"https://mynoirmovies.herokuapp.com"}/users/${storedUser.Username}/movies/${movieId}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`
