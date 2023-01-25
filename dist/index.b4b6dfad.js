@@ -27161,7 +27161,7 @@ const MainView = ()=>{
     const [token, setToken] = (0, _react.useState)(storedToken ? storedToken : null);
     (0, _react.useEffect)(()=>{
         if (!token) return;
-        fetch(`${"https://mynoirmovies.herokuapp.com"}/movies`, {
+        fetch(`${undefined}/movies`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -45707,7 +45707,7 @@ const MovieView = ({ movies  })=>{
     console.log(movie);
     const addFavorite = (movieId)=>{
         if (!token) return;
-        const url = `${"https://mynoirmovies.herokuapp.com"}/users/${storedUser.Username}/movies/${movieId}`;
+        const url = `${undefined}/users/${storedUser.Username}/movies/${movieId}`;
         const requestOptions = {
             method: "POST",
             headers: {
@@ -45886,7 +45886,7 @@ const LoginView = ({ onLoggedIn  })=>{
             Username: username,
             Password: password
         };
-        fetch(`${"https://mynoirmovies.herokuapp.com"}/login`, {
+        fetch(`${undefined}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -46021,7 +46021,7 @@ const SignupView = ()=>{
             Birthday: birthday
         };
         //fetch("http://localhost:8080/users", {
-        fetch(`${"https://mynoirmovies.herokuapp.com"}/users`, {
+        fetch(`${undefined}/users`, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -46347,7 +46347,7 @@ const ProfileView = ({ movies  })=>{
         });
     }
     const getUserData = ()=>{
-        const url = `${"https://mynoirmovies.herokuapp.com"}/users/${storedUser.Username}`;
+        const url = `${undefined}/users/${storedUser.Username}`;
         const bearer = `Bearer ${token}`;
         fetch(url, {
             method: "GET",
@@ -46548,7 +46548,7 @@ const UserInfo = ({ username , email  })=>{
         if (username && token) {
             let confirmDelete = confirm("Are you sure you want to delete your account?");
             if (!confirmDelete) return;
-            fetch(`${"https://mynoirmovies.herokuapp.com"}/users/${username}`, {
+            fetch(`${undefined}/users/${username}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer $(token)`
@@ -46635,7 +46635,7 @@ const FavoriteMovies = ({ usersFavoriteMovies  })=>{
     const token = localStorage.getItem("token");
     const storedUser = JSON.parse(localStorage.getItem("user"));
     const removeFavorite = (movieId)=>{
-        fetch(`${"https://mynoirmovies.herokuapp.com"}/users/${storedUser.Username}/movies/${movieId}`, {
+        fetch(`${undefined}/users/${storedUser.Username}/movies/${movieId}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -46784,7 +46784,7 @@ $RefreshReg$(_c, "FavoriteMovies");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"a7bQf","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8VV7g","./favorite-movies.scss":"c49mk"}],"c49mk":[function() {},{}],"2SBwg":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","./favorite-movies.scss":"c49mk","@parcel/transformer-js/src/esmodule-helpers.js":"a7bQf","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8VV7g"}],"c49mk":[function() {},{}],"2SBwg":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$95d1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
