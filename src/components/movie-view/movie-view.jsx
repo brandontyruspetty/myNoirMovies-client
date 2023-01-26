@@ -40,6 +40,10 @@ export const MovieView = ({ movies }) => {
           <div className="title-text-center">
             <span>{movie.title}</span>
           </div>
+          <div>
+          <span>Genre: </span>
+          <span>{movie.genre}</span>
+          </div>
          <Button
           className="fav-btn"
           size="sm"
@@ -59,6 +63,10 @@ export const MovieView = ({ movies }) => {
         <div>
           <span>Director: </span>
           <span>{movie.director}</span>
+        </div>
+        <div>
+          <span>Synopsis: </span>
+          <span>{movie.description}</span>
         </div>
         </Card.Body>
         <Card.Footer>
