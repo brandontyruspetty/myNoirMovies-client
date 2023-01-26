@@ -16,6 +16,8 @@ export const MainView = () => {
   const [movies, setMovies] = useState([]);
   const [user, setUser] = useState(storedUser? storedUser : null);
   const [token, setToken] = useState(storedToken? storedToken : null);
+  const [searchInput, setSearchInput] = useState("");
+  const [filterCriteria, setFilterCriteria] = useState("title");
 
   useEffect(() => {
     if (!token) return;
@@ -40,16 +42,40 @@ export const MainView = () => {
     });
   }, [token]);
 
+  const handleSearchInput = (e) => {
+    setSearchInput(e.target.value);
+  };
+   
+  const handleFilterSelection = (e) => {
+    setFilterCriteria(e.target.value);
+  };
+
+  const filteredMovies = movies.filter((movie) => {
+    if (filterCriteria === "title") {
+      return movie.title.toLowerCase().includes(searchInput.toLowerCase());
+    }
+    if (filterCriteria === "genre") {
+      return movie.genre.toLowerCase().includes(searchInput.toLowerCase());
+    }
+    if (filterCriteria === "director") {
+      return movie.director.toLowerCase().includes(searchInput.toLowerCase());
+    }
+  });
+
    
     return ( 
        <BrowserRouter>
        <NavigationBar
-       user={user}
-       onLoggedOut={() => {
-        setUser(null);
-        setToken(null);
-        localStorage.clear()
-       }}
+        user={user}
+        onLoggedOut={() => {
+          setUser(null);
+          setToken(null);
+          setSearchInput("");
+          setFilterCriteria("");
+          localStorage.clear()
+        }}
+        handleSearchInput={(e) => setSearchInput(e.target.value)}
+        handleFilterSelection={(e) => setFilterCriteria(e.target.value)}
       />
         <Row className="justify-content-md-center">
           <Routes>
