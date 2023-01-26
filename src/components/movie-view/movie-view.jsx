@@ -52,7 +52,7 @@ export const MovieView = ({ movies }) => {
         <Card.Body>
         <div>
           <Card.Img
-           className="w-100" 
+           className="w-75" 
             src={movie.image} 
           />
         </div>
