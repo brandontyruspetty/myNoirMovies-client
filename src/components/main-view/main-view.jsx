@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Modal } from "react";
 import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
@@ -16,6 +16,8 @@ export const MainView = () => {
   const [movies, setMovies] = useState([]);
   const [user, setUser] = useState(storedUser? storedUser : null);
   const [token, setToken] = useState(storedToken? storedToken : null);
+  const [searchInput, setSearchInput] = useState("");
+  const [filterCriteria, setFilterCriteria] = useState("title");
 
   useEffect(() => {
     if (!token) return;
@@ -40,16 +42,40 @@ export const MainView = () => {
     });
   }, [token]);
 
+  const handleSearchInput = (e) => {
+    setSearchInput(e.target.value);
+  };
    
+  const handleFilterSelection = (e) => {
+    setFilterCriteria(e.target.value);
+  };
+
+  const filteredMovies = movies.filter((movie) => {
+    if (filterCriteria === "title") {
+      return movie.title.toLowerCase().includes(searchInput.toLowerCase());
+    }
+    if (filterCriteria === "genre") {
+      return movie.genre.toLowerCase().includes(searchInput.toLowerCase());
+    }
+    if (filterCriteria === "director") {
+      return movie.director.toLowerCase().includes(searchInput.toLowerCase());
+    }
+  });
+
     return ( 
        <BrowserRouter>
        <NavigationBar
-       user={user}
-       onLoggedOut={() => {
-        setUser(null);
-        setToken(null);
-        localStorage.clear()
-       }}
+        user={user}
+        onLoggedOut={() => {
+          setUser(null);
+          setToken(null);
+          setSearchInput("");
+          setFilterCriteria("title");
+          localStorage.removeItem("user");
+          localStorage.removeItem("token");
+        }}
+        handleSearchInput={(e) => setSearchInput(e.target.value)}
+        handleFilterSelection={(e) => setFilterCriteria(e.target.value)}
       />
         <Row className="justify-content-md-center">
           <Routes>
@@ -107,9 +133,10 @@ export const MainView = () => {
                     <Col>The list is empty!</Col>
                   ) : (
                     <>
-                      {movies.map((movie) => (
+                      {filteredMovies.map((movie) => (
                         <Col className="mb-4" key={movie.id} md={3}>
-                          <MovieCard movie={movie} />
+                          <MovieCard 
+                            movie={movie} />
                         </Col>
                       ))}
                     </>
