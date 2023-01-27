@@ -2911,15 +2911,12 @@ var _indexScss = require("./index.scss");
 //Main component (will eventually use all the others)
 const MyNoirMoviesApp = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _containerDefault.default), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
-                fileName: "src/index.jsx",
-                lineNumber: 14,
-                columnNumber: 9
-            }, undefined),
-            ";"
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
+            fileName: "src/index.jsx",
+            lineNumber: 14,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/index.jsx",
         lineNumber: 13,
         columnNumber: 5
