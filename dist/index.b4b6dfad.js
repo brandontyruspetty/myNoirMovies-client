@@ -27202,14 +27202,15 @@ const MainView = ()=>{
                     setUser(null);
                     setToken(null);
                     setSearchInput("");
-                    setFilterCriteria("");
-                    localStorage.clear();
+                    setFilterCriteria("title");
+                    localStorage.removeItem("user");
+                    localStorage.removeItem("token");
                 },
                 handleSearchInput: (e)=>setSearchInput(e.target.value),
                 handleFilterSelection: (e)=>setFilterCriteria(e.target.value)
             }, void 0, false, {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 68,
+                lineNumber: 67,
                 columnNumber: 8
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
@@ -27277,7 +27278,7 @@ const MainView = ()=>{
                                 }, void 0, false, void 0, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     children: "The list is empty!"
                                 }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                                    children: movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                                    children: filteredMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                             className: "mb-4",
                                             md: 3,
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
@@ -27306,7 +27307,7 @@ const MainView = ()=>{
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 146,
+                            lineNumber: 147,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -27323,7 +27324,7 @@ const MainView = ()=>{
         ]
     }, void 0, true, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 67,
+        lineNumber: 66,
         columnNumber: 8
     }, undefined);
 };
@@ -46358,7 +46359,7 @@ const NavigationBar = ({ user , onLoggedOut , handleSearchInput , handleFilterSe
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
                                             lineNumber: 56,
-                                            columnNumber: 19
+                                            columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
                                             value: "genre",
@@ -46366,7 +46367,7 @@ const NavigationBar = ({ user , onLoggedOut , handleSearchInput , handleFilterSe
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
                                             lineNumber: 57,
-                                            columnNumber: 19
+                                            columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
                                             value: "director",
@@ -46374,7 +46375,7 @@ const NavigationBar = ({ user , onLoggedOut , handleSearchInput , handleFilterSe
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
                                             lineNumber: 58,
-                                            columnNumber: 19
+                                            columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
