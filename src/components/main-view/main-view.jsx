@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Modal } from "react";
 import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
@@ -62,7 +62,6 @@ export const MainView = () => {
     }
   });
 
-   
     return ( 
        <BrowserRouter>
        <NavigationBar
@@ -71,8 +70,9 @@ export const MainView = () => {
           setUser(null);
           setToken(null);
           setSearchInput("");
-          setFilterCriteria("");
-          localStorage.clear()
+          setFilterCriteria("title");
+          localStorage.removeItem("user");
+          localStorage.removeItem("token");
         }}
         handleSearchInput={(e) => setSearchInput(e.target.value)}
         handleFilterSelection={(e) => setFilterCriteria(e.target.value)}
@@ -133,9 +133,10 @@ export const MainView = () => {
                     <Col>The list is empty!</Col>
                   ) : (
                     <>
-                      {movies.map((movie) => (
+                      {filteredMovies.map((movie) => (
                         <Col className="mb-4" key={movie.id} md={3}>
-                          <MovieCard movie={movie} />
+                          <MovieCard 
+                            movie={movie} />
                         </Col>
                       ))}
                     </>
