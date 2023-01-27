@@ -45803,7 +45803,7 @@ const MovieView = ({ movies  })=>{
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Img, {
-                                    className: "w-75",
+                                    className: "img-poster my-4 img-fluid w-75 d-block mx-auto",
                                     src: movie.image
                                 }, void 0, false, {
                                     fileName: "src/components/movie-view/movie-view.jsx",
