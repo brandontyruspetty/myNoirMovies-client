@@ -11,7 +11,7 @@ import "./index.scss";
 const MyNoirMoviesApp = () => {
   return (
     <Container>
-        <MainView />;
+        <MainView />
     </Container>
   )
 };
