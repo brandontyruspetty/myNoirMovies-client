@@ -12094,6 +12094,20 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 
+.navbar {
+  box-shadow: 0 4px 8px #0003;
+  background-color: #1f2941 !important;
+  border-radius: 8px !important;
+}
+
+.navbar a {
+  color: #fbff00;
+}
+
+.navbar a:visited {
+  color: #ff00e6;
+}
+
 .back-button {
   color: #f5f5f5;
   background-color: #1e90ff;
