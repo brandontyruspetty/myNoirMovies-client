@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav, Nav, Form, FormControl } from "react-bootstrap";
+import { Navbar, Container, Nav, Form, FormControl } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./navigation-bar.scss";
 
@@ -52,11 +52,11 @@ export const NavigationBar = ({
               <FormControl
                 as="select"
                 onChange={handleFilterSelection}
-                >
-                  <option value="title">Title</option>
-                  <option value="genre">Genre</option>
-                  <option value="director">Director</option>
-                </FormControl>
+              >
+                <option value="title">Title</option>
+                <option value="genre">Genre</option>
+                <option value="director">Director</option>
+              </FormControl>
             </Form>
           )}
         </Navbar.Collapse>
