@@ -1,7 +1,14 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Nav, Form, FormControl } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./navigation-bar.scss";
+
  
-export const NavigationBar = ({ user, onLoggedOut }) => {
+export const NavigationBar = ({ 
+  user, 
+  onLoggedOut, 
+  handleSearchInput, 
+  handleFilterSelection 
+}) => {
   return ( 
     <Navbar bg="light" expand="lg">
       <Container>
@@ -29,10 +36,29 @@ export const NavigationBar = ({ user, onLoggedOut }) => {
               <Nav.Link as={Link} to="/users">
                 {user.Username}
               </Nav.Link>
-              <Nav.Link onClick={onLoggedOut}>Logout</Nav.Link>
+              <Nav.Link as={Link} onClick={onLoggedOut}>
+                Logout
+                </Nav.Link>
               </>
             )}
           </Nav>
+          {user && (
+            <Form inline className="d-flex">
+              <FormControl
+                type="text"
+                placeholder="Search"
+                onChange={handleSearchInput}
+              />
+              <FormControl
+                as="select"
+                onChange={handleFilterSelection}
+                >
+                  <option value="title">Title</option>
+                  <option value="genre">Genre</option>
+                  <option value="director">Director</option>
+                </FormControl>
+            </Form>
+          )}
         </Navbar.Collapse>
       </Container>
     </Navbar>
