@@ -34,7 +34,6 @@ export const UserInfo = ({ username, email }) => {
       <h4> Your Info </h4>
         <p>Name: {username}</p>
         <p>Email: {email}</p>
-        <p>Birthday: {birth.date}</p>
         <Button variant="outline-danger" onClick={handleDelete}>
          Delete Account
         </Button>
