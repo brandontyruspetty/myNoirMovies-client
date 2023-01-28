@@ -106,7 +106,7 @@ const handleSubmit = (e) => {
 return (
   <Container>
     <Row>
-      <Col xs={6} sm={6}>
+      <Col xs={4} sm={4}>
         <Card bg="dark" text="light">
           <Card.Body>
             <UserInfo

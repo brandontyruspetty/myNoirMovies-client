@@ -31,12 +31,21 @@ export const UserInfo = ({ username, email }) => {
 
   return (
     <>
-      <h4> Your Info </h4>
-      <p>Name: {username}</p>
-      <p>Email: {email}</p>
-      <Button variant="outline-danger" onClick={handleDelete}>
-        Delete Account
-      </Button>
+      <Container>
+        <Row>
+          <Col>
+            <Card>
+              <h4> Your Info </h4>
+              <p>Name: {username}</p>
+              <p>Email: {email}</p>
+              <p>Birthday: {birth.date}</p>
+              <Button variant="outline-danger" onClick={handleDelete}>
+                Delete Account
+              </Button>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
