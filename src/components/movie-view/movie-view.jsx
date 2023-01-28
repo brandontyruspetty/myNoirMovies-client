@@ -15,7 +15,7 @@ export const MovieView = ({ movies }) => {
   const addFavorite = (movieId) => {
     if (!token) return;
 
-    const url = `${process.env.API_ENDPOINT}/users/${storedUser.Username}/movies/${movieId}`;
+    const url = `https://mynoirmovies.herokuapp.com/users/${storedUser.Username}/movies/${movieId}`;
       const requestOptions = {
         method: "POST",
         headers: {
