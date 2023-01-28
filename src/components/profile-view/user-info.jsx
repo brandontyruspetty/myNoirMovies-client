@@ -10,7 +10,7 @@ export const UserInfo = ({ username, email }) => {
         "Are you sure you want to delete your account?"
       );
       if (!confirmDelete) return;
-      fetch(`${process.env.API_ENDPOINT}/users/${username}`, {
+      fetch(`https://mynoirmovies.herokuapp.com/users/${username}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer $(token)`},
     })

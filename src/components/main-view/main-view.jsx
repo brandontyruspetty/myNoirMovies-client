@@ -22,7 +22,8 @@ export const MainView = () => {
   useEffect(() => {
     if (!token) return;
 
-      fetch(`${process.env.API_ENDPOINT}/movies`, {
+      //fetch(`${process.env.API_ENDPOINT}/movies`, {
+      fetch("https://mynoirmovies.herokuapp.com/movies", {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => response.json())

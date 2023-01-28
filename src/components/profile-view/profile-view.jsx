@@ -35,7 +35,7 @@ function handleResponse(response) {
 }
 
 const getUserData = () => {
-  const url = `${process.env.API_ENDPOINT}/users/${storedUser.Username}`;
+  const url = `https://mynoirmovies.herokuapp.com/users/${storedUser.Username}`;
   const bearer = `Bearer ${token}`;
   fetch(url, {
     method: "GET",

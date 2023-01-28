@@ -15,7 +15,8 @@ export const LoginView = ({ onLoggedIn }) => {
       Password: password
     };
 
-      fetch(`${process.env.API_ENDPOINT}/login`, {
+      //fetch(`${process.env.API_ENDPOINT}/login`, {
+      fetch("https://mynoirmovies.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

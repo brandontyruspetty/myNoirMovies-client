@@ -8,7 +8,7 @@ export const FavoriteMovies = ({ usersFavoriteMovies }) => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
   
   const removeFavorite = (movieId) => {
-    fetch(`${process.env.API_ENDPOINT}/users/${storedUser.Username}/movies/${movieId}`,
+    fetch(`https://mynoirmovies.herokuapp.com/users/${storedUser.Username}/movies/${movieId}`,
       {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}`},
