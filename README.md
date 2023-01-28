@@ -1,5 +1,7 @@
 # **Project Title: MyNoirMovies App**
 
+**[Click link to check out my project:]**(https://mynoirmovies.netlify.app/)
+
 ## **Objective:**  Using React, build the client-side for an app called myNoirMovies based on its existing server-side code (REST API and database).
 
 ## **The 5 W's:**
